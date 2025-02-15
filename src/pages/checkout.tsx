@@ -23,7 +23,7 @@ const Checkout = () => {
         doc.save("factura.pdf");
     };
 
-    const onSubmit = (data: any) => {
+    const onSubmit = () => {
         setLoading(true);
         confetti({ particleCount: 150, spread: 70 }); 
 
