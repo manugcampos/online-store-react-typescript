@@ -3,13 +3,14 @@ import { useCartStore } from "../store/cart-store";
 import { useState } from "react";
 import jsPDF from "jspdf";
 import confetti from "canvas-confetti";
+import { calculateTotalPrice } from "../utils/cart-utils";
 
 const Checkout = () => {
     const { cart, clearCart } = useCartStore();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [loading, setLoading] = useState(false);
 
-    const totalPrice = cart.reduce((acc, item) => acc + item.price * (item.quantity ?? 1), 0).toFixed(2);
+    const totalPrice = calculateTotalPrice(cart);
 
     const generateInvoice = () => {
         const doc = new jsPDF();
@@ -25,12 +26,12 @@ const Checkout = () => {
 
     const onSubmit = () => {
         setLoading(true);
-        confetti({ particleCount: 150, spread: 70 }); 
+        confetti({ particleCount: 150, spread: 70 });
 
         setTimeout(() => {
             setLoading(false);
-            clearCart(); 
-            generateInvoice(); 
+            clearCart();
+            generateInvoice();
         }, 1200);
     };
 
