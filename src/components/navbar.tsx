@@ -24,8 +24,8 @@ const Navbar = () => {
       queryFn: fetchCategories, 
     });
   
-    if (isLoading) return <p>Cargando categorías...</p>;
-    if (error) return <p>Error al cargar categorías</p>;
+    if (isLoading) return <p>Loading Categories...</p>;
+    if (error) return <p>Error while loading categories</p>;
   
 
   return (
@@ -37,7 +37,6 @@ const Navbar = () => {
               <span className="text-xl font-bold text-black">Store</span>
             </Link>
 
-            {/* Navegación de escritorio */}
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {categories!.map((category) => (
                 <Link
@@ -59,7 +58,7 @@ const Navbar = () => {
                   className={`${
                     isSearchOpen ? "w-60" : "w-0"
                   } transition-all duration-300 ease-in-out bg-gray-100 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-black`}
-                  placeholder="Buscar productos..."
+                  placeholder="Search products..."
                 />
                 <button
                   onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -80,7 +79,7 @@ const Navbar = () => {
               </span>
             </Link>
 
-            {/* Botón móvil */}
+            {/* mobile button */}
             <div className="flex items-center sm:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -94,14 +93,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menú móvil */}
+      {/* Mobile menu */}
       <div className={`${isOpen ? "block" : "hidden"} sm:hidden`}>
         <div className="pt-2 pb-3 space-y-1">
           <div className="px-4 pb-2">
             <input
               type="text"
               className="w-full bg-gray-100 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-black"
-              placeholder="Buscar productos..."
+              placeholder="Search products..."
             />
           </div>
 

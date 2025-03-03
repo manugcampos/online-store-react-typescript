@@ -1,55 +1,57 @@
-### 🛠️ **Prueba Técnica en React**  
+### 🛠️ **React Exercise**
 
-Este proyecto es una **prueba técnica en React** en la que he utilizado diversas tecnologías y librerías para lograr un desarrollo rápido, eficiente y escalable.  
-
----
-
-## 🚀 **Stack Tecnológico**
-- **⚛️ React ** - La base del proyecto.
-- **💨 Tailwind CSS** - Para estilizar de manera rápida y eficiente.
-- **🎨 Lucide-react** - Íconos modernos y bien diseñados.
-- **🛒 Zustand** - Manejo de estado para la lógica del carrito.
-- **🌍 Wouter** - Enrutador ultraligero para mejorar el rendimiento.
-- **📄 React Hook Form** - Para formularios optimizados.
-- **⚡ Vite + TypeScript** - Mejor rendimiento y tipado seguro.
+This project is a **React exercise** completed in around 3 hours, where I utilized various technologies and libraries to achieve rapid, efficient, and scalable development.
 
 ---
 
-## 🏗️ **Decisiones Técnicas**
-### ✅ **Manejo del Estado con Zustand**
-He preferido usar **Zustand** en lugar de Redux o Context API por varias razones:  
-- Es **más liviano** y **más moderno** que Redux.  
-- Su API es **más sencilla y menos verbosa**.  
-- Permite **persistencia y middlewares de manera fácil**.  
-- **Mejor escalabilidad** → La lógica del carrito se puede reutilizar fácilmente en **React Native** si fuese necesario.  
+## 🚀 **Technology Stack**
+- **⚛️ React** - The foundation of the project.
+- **💨 Tailwind CSS** - For fast and efficient styling.
+- **🎨 Lucide-react** - Modern and well-designed icons.
+- **🛒 Zustand** - State management for cart logic.
+- **🌍 Wouter** - Ultra-light router to enhance performance.
+- **📄 React Hook Form** - For optimized forms.
+- **⚡ Vite + TypeScript** - For better performance and type safety.
 
-### ✅ **Enrutamiento con Wouter**
-Elegí **Wouter** en vez de React Router porque:  
-- Es **extremadamente ligero** (menos de 2 KB).  
-- Usa un **sistema de rutas declarativas** más intuitivo.  
-- **Soporte de Hooks** → Perfecto para aplicaciones modernas.  
+---
 
-### ✅ **Formularios con React Hook Form**
-Para manejar formularios, **React Hook Form** es la mejor opción:  
-- **Rápido y eficiente** → No re-renderiza innecesariamente.  
-- **Validación integrada** → Sin necesidad de usar librerías extra.  
-- **Excelente integración con TypeScript**.  
+## 🏗️ **Technical Decisions**
+### ✅ **State Management with Zustand**
+I chose **Zustand** over Redux or Context API for several reasons:
+- It is **lighter** and **more modern** than Redux.
+- Its API is **simpler and less verbose**.
+- It easily supports **persistence and middleware**.
+- **Better scalability** → The cart logic can be easily reused in **React Native** if needed.
+
+### ✅ **Routing with Wouter**
+I opted for **Wouter** instead of React Router because:
+- It is **extremely lightweight** (less than 2 KB).
+- It uses a more intuitive **declarative routing system**.
+- **Hook support** → Perfect for modern applications.
+
+### ✅ **Forms with React Hook Form**
+For handling forms, **React Hook Form** is the best choice:
+- **Fast and efficient** → Avoids unnecessary re-renders.
+- **Built-in validation** → No need for extra libraries.
+- **Excellent integration with TypeScript**.
 
 ### ✅ **Vite + TypeScript**
-Este proyecto usa **Vite** en vez de Create React App porque:  
-- **Compila más rápido** y tiene **mejor performance**.  
-- **Menos configuración** y listo para producción.  
-- **TypeScript** asegura consistencia y previene errores.
+This project uses **Vite** instead of Create React App because:
+- It **builds faster** and has **better performance**.
+- **Less configuration** and production-ready out-of-the-box.
+- **TypeScript** ensures consistency and prevents errors.
 
 ---
 
-## 🎯 **Organización del Código**
-He intentado mantener el código **modular y reutilizable**:
-- Componentes como **`CartButton`** y **`Rating`** son reutilizables en todo el proyecto.  
-- El cálculo del **total del carrito** está separado en un **utilitario (`cartUtils.ts`)**.  
-- Se evita la repetición de código mediante **hooks y funciones reutilizables**.  
+## 🎯 **Code Organization**
+I have aimed to keep the code **modular and reusable**:
+- Components like **`CartButton`** and **`Rating`** are reusable throughout the project.
+- The cart **total calculation** is separated into a utility (`cartUtils.ts`).
+- Code duplication is minimized through **custom hooks and reusable functions**.
 
 ---
 
-## 🎉 **Conclusión**
-Este proyecto ha sido desarrollado con la intención de ser **rápido, escalable y reutilizable**. He priorizado herramientas **modernas y eficientes**, asegurando que la base del código sea sólida para su posible expansión en el futuro.
+## 🎉 **Conclusion**
+This project was developed with the intention of being **fast, scalable, and reusable**. I prioritized **modern and efficient** tools, ensuring that the codebase is solid enough for potential future expansion.
+
+> Note: Unit tests are not included as they were not required for this exercise.

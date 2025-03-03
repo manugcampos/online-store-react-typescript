@@ -9,7 +9,7 @@ const Home = () => {
                     <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                         <div className="sm:max-w-lg">
                             <h1 className="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                Tienda online de prueba 
+                                Test Online Store 
                             </h1>
                             <p className="mt-4 text-xl text-gray-500">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -87,7 +87,7 @@ const Home = () => {
                                     href="#"
                                     className="inline-block rounded-md border border-transparent bg-black px-8 py-3 text-center font-medium text-white hover:bg-gray-800"
                                 >
-                                    Comprar colección
+                                    Buy Collection
                                 </a>
                             </div>
                         </div>
@@ -101,4 +101,3 @@ const Home = () => {
 }
 
 export default Home
-

@@ -8,7 +8,7 @@ interface RatingProps {
 const Rating: React.FC<RatingProps> = ({ rating }) => {
   return (
     <div className="mt-3">
-      <h3 className="sr-only">Reseñas</h3>
+      <h3 className="sr-only">Reviews</h3>
       <div className="flex items-center">
         {/* Star Rating */}
         <div className="flex items-center">
@@ -24,11 +24,11 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
         </div>
 
         {/* Hidden rating text for accessibility */}
-        <p className="sr-only">{rating.rate} de 5 estrellas</p>
+        <p className="sr-only">{rating.rate} of 5 stars</p>
 
         {/* Review count */}
         <span className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
-          {rating.count} reseñas
+          {rating.count} reviews
         </span>
       </div>
     </div>

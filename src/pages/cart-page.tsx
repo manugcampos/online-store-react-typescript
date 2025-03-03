@@ -12,19 +12,19 @@ const CartPage: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-0">
-        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Carrito de compras</h1>
+        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
 
         {cart.length === 0 ? (
           <div className="mt-12 text-center">
             <ShoppingBag className="mx-auto h-12 w-12 text-gray-400" />
-            <h3 className="mt-2 text-sm font-medium text-gray-900">Tu carrito está vacío</h3>
-            <p className="mt-1 text-sm text-gray-500">Empieza a añadir productos a tu carrito</p>
+            <h3 className="mt-2 text-sm font-medium text-gray-900">Your cart is empty</h3>
+            <p className="mt-1 text-sm text-gray-500">Start adding products to your cart</p>
           </div>
         ) : (
           <div className="mt-12">
             <section aria-labelledby="cart-heading">
               <h2 id="cart-heading" className="sr-only">
-                Productos en tu carrito
+                Products in your cart
               </h2>
               <ul role="list" className="border-t border-b border-gray-200 divide-y divide-gray-200">
                 {cart.map((item) => (
@@ -53,7 +53,7 @@ const CartPage: React.FC = () => {
                           >
                             <Minus className="h-5 w-5" />
                           </button>
-                          <p className="mx-2 text-gray-500">Cantidad: {item.quantity}</p>
+                          <p className="mx-2 text-gray-500">Quantity: {item.quantity}</p>
                           <button
                             onClick={() => addToCart(item)}
                             className="p-1 rounded-full text-gray-400 hover:text-gray-500"
@@ -81,20 +81,20 @@ const CartPage: React.FC = () => {
                   <p>Subtotal</p>
                   <p>${totalPrice.toFixed(2)}</p>
                 </div>
-                <p className="mt-0.5 text-sm text-gray-500">Envío e impuestos calculados al finalizar la compra.</p>
+                <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                 <div className="mt-6">
                   <Link href="/checkout">
                     <button
                       className="w-full bg-black border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-black"
                       disabled={cart.length === 0}
                     >
-                      Finalizar compra
+                      Checkout
                     </button>
                   </Link>
                 </div>
                 <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
                   <button type="button" className="text-black font-medium hover:text-gray-800" onClick={clearCart}>
-                    Vaciar carrito
+                    Empty cart
                   </button>
                 </div>
               </div>
